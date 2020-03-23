@@ -1,4 +1,22 @@
 <?php
+class Fruit {
+  public $name;
+  public $color;
+
+  //PHP will automatically call this function when we create an object from a class.
+  function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+
+  //PHP will automatically call this function at the end of the script.
+  function __destruct() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+$apple = new Fruit("Apple", "red");
+
 
 class Bill
 {
@@ -32,7 +50,7 @@ class Bill
 
     public function __destruct()
     {
-        echo $this->bill;
+        echo $this->bill . '<br>';
     }
 }
 
